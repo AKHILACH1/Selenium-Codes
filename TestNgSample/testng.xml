@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>  
-         <class name="com.obsqura.TestNgSample.LocatorsSample"></class>
+         <class name="com.obsqura.TestNgSample.Sum"></class>
         <!-- <class name="com.obsqura.TestNgSample.TestCommands">
         <methods>
         <include name="verifyUrlAndTitle"></include>

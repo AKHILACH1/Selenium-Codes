@@ -3,14 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.obsqura.TestNgSample.TestCommands">
+      <class name="com.obsqura.TestNgSample.Sum">
         <methods>
-          <include name="softAssert"/>
+          <include name="sum"/>
           <include name="InitializeBrowser"/>
-          <include name="verifyUrlAndTitle"/>
           <include name="browserQuit"/>
         </methods>
-      </class> <!-- com.obsqura.TestNgSample.TestCommands -->
+      </class> <!-- com.obsqura.TestNgSample.Sum -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
