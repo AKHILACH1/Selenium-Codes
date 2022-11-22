@@ -5,8 +5,8 @@
     <classes>
       <class name="com.obsqura.TestNgSample.Sum">
         <methods>
-          <include name="sum"/>
           <include name="InitializeBrowser"/>
+          <include name="enterMsgVerify"/>
           <include name="browserQuit"/>
         </methods>
       </class> <!-- com.obsqura.TestNgSample.Sum -->
