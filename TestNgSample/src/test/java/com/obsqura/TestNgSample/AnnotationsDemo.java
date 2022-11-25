@@ -23,42 +23,42 @@ public class AnnotationsDemo {
 	
 	@BeforeMethod
 	public void beforeMethod() {
-		System.out.println("Executed Before Every Method");
+		System.out.println("Executed Before  Method");
 	}
 	
 	@AfterMethod
 	public void afterMethod() {
-		System.out.println("Executed After Every Method");
+		System.out.println("Executed After Method");
 	}
 
 	@BeforeClass
 	public void beforeClass() {
-		System.out.println("Executed Before Class Method");
+		System.out.println("Executed Before Class ");
 	}
 
 	@AfterClass
 	public void afterClass() {
-		System.out.println("Executed After Class Method");
+		System.out.println("Executed After Class");
 	}
 
 	@BeforeTest
 	public void beforeTest() {
-		System.out.println("Executed Before Test Method");
+		System.out.println("Executed Before Test");
 	}
 
 	@AfterTest
 	public void afterTest() {
-		System.out.println("Executed After Test Method");
+		System.out.println("Executed After Test ");
 	}
 
 	@BeforeSuite
 	public void beforeSuite() {
-		System.out.println("Executed Before Test Suite Method");
+		System.out.println("Executed Before Test Suite ");
 	}
 
 	@AfterSuite
 	public void afterSuite() {
-		System.out.println("Executed After Test Suite Method");
+		System.out.println("Executed After Test Suite");
 	}
 
 

@@ -1,6 +1,8 @@
 package com.obsqura.TestNgSample;
 
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -39,9 +41,9 @@ public class Sum extends Base{
 	@Test
 	public void enterMsgVerify() {
 		String inputMessage="Hello";
-		String actualMessage,expectedMessage;
+		String actualMessage,expectedMessage="Your Message : "+inputMessage;
 		WebElement enterMsgField=driver.findElement(By.id("single-input-field"));
-		WebElement showMsgButton= driver.findElement(By.xpath("//button[@id='button-two']"));
+		WebElement showMsgButton= driver.findElement(By.xpath("//button[@id='button-one']"));
 		WebElement ShowMsgField=driver.findElement(By.xpath("//div[@id='message-one']"));
 		boolean isEnterMsgFieldDisplayed=enterMsgField.isDisplayed();
 		boolean isShowMsgButtonDisplayed=showMsgButton.isDisplayed();
@@ -51,7 +53,7 @@ public class Sum extends Base{
 			if(isShowMsgButtonEnabled) {
 				showMsgButton.click();
 				actualMessage=ShowMsgField.getText();
-				expectedMessage="Your Message : "+inputMessage;
+				
 				Assert.assertEquals(expectedMessage,actualMessage,"not equals");
 			}
 			Assert.assertTrue(isShowMsgButtonEnabled,"Button is not enabled");
@@ -61,6 +63,17 @@ public class Sum extends Base{
 		
 	}
 		
+	@Test
+	public void getattributeSample() {
+	String classNameGet=driver.findElement(By.xpath("//button[@id='button-one']")).getAttribute("class");
+	String tagNameGet=driver.findElement(By.xpath("//button[@id='button-one']")).getTagName();
+	String backgroundColour=driver.findElement(By.xpath("//button[@id='button-one']")).getCssValue("background-color");
+	String fontColour=driver.findElement(By.xpath("//button[@id='button-one']")).getCssValue("color");
+	String boarderRadius=driver.findElement(By.xpath("//button[@id='button-one']")).getCssValue("border-radius");
+	Dimension buttonSize=driver.findElement(By.xpath("//button[@id='button-one']")).getSize();
+	}
+	
+	
 	
 
 }

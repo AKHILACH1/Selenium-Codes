@@ -16,6 +16,7 @@ public class Base {
 				"C:\\Users\\Akhila\\obsquraJava\\TestNgSample\\src\\main\\java\\Resources\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://selenium.obsqurazone.com/simple-form-demo.php");
+		//driver.get("https://www.amazon.in");
 	}
 
 	public void browserClose() {

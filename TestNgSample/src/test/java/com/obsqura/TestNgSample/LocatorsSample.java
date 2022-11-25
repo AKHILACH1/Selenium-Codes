@@ -62,5 +62,34 @@ public class LocatorsSample extends Base{
 	public void indexXpath() {
 		driver.findElement(By.xpath("(//div[@class='navFooterColHead'])[2]"));
 	}
-}
+	
+	@Test
+	public void linkTextSample() {
+		driver.findElement(By.linkText("Checkbox Demo")).click();;
+		
+	}
+	@Test
+	public void partialLinkText() {
+		driver.findElement(By.partialLinkText("Checkbox")).click();
+		
+	}
+	@Test
+	public void xpathText() {
+		driver.findElement(By.xpath("//a[text()='Radio Buttons Demo']")).click();
+	}
+	@Test
+		public void idTest() {
+		driver.findElement(By.id("twotabsearchtextbox"));
+	}
+	
+	@Test
+	public void tagAndIdTest() {
+		driver.findElement(By.cssSelector("input#twotabsearchtextbox"));
+	}
+	@Test
+	public void xpathTest() {
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
+		
+	}
+}	
 	
