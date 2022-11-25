@@ -6,6 +6,7 @@
          <class name="com.obsqura.TestNgSample.CssFind">
          <methods>
          <include name="cssWrite"></include>
+         <include name="softAssert"></include>
          </methods>
         
          </class>
