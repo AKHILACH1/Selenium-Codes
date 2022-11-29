@@ -6,8 +6,8 @@
       <class name="com.obsqura.TestNgSample.GetLocation">
         <methods>
           <include name="InitializeBrowser"/>
+          <include name="checkRadioButtonMale"/>
           <include name="browserQuit"/>
-          <include name="findelementsSample2"/>
         </methods>
       </class> <!-- com.obsqura.TestNgSample.GetLocation -->
     </classes>

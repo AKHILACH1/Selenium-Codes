@@ -6,7 +6,7 @@
          <class name="com.obsqura.TestNgSample.GetLocation">
          <methods>
         
-           <include name="findelementsSample2"></include>
+           <include name="checkRadioButtonNone"></include>
          
          </methods>
         

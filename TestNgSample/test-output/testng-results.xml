@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
+<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-29T16:35:05 IST" name="Suite" finished-at="2022-11-29T16:35:10 IST" duration-ms="4871">
+  <suite started-at="2022-11-29T19:57:25 IST" name="Suite" finished-at="2022-11-29T19:57:29 IST" duration-ms="4291">
     <groups>
     </groups>
-    <test started-at="2022-11-29T16:35:05 IST" name="Test" finished-at="2022-11-29T16:35:10 IST" duration-ms="4871">
+    <test started-at="2022-11-29T19:57:25 IST" name="Test" finished-at="2022-11-29T19:57:29 IST" duration-ms="4291">
       <class name="com.obsqura.TestNgSample.GetLocation">
-        <test-method is-config="true" signature="InitializeBrowser()[pri:0, instance:com.obsqura.TestNgSample.GetLocation@53fdffa1]" started-at="2022-11-29T16:35:05 IST" name="InitializeBrowser" finished-at="2022-11-29T16:35:08 IST" duration-ms="3405" status="PASS">
+        <test-method is-config="true" signature="InitializeBrowser()[pri:0, instance:com.obsqura.TestNgSample.GetLocation@32ee6fee]" started-at="2022-11-29T19:57:25 IST" name="InitializeBrowser" finished-at="2022-11-29T19:57:29 IST" duration-ms="3559" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InitializeBrowser -->
-        <test-method signature="findelementsSample2()[pri:0, instance:com.obsqura.TestNgSample.GetLocation@53fdffa1]" started-at="2022-11-29T16:35:08 IST" name="findelementsSample2" finished-at="2022-11-29T16:35:10 IST" duration-ms="1253" status="PASS">
+        <test-method signature="checkRadioButtonNone()[pri:0, instance:com.obsqura.TestNgSample.GetLocation@32ee6fee]" started-at="2022-11-29T19:57:29 IST" name="checkRadioButtonNone" finished-at="2022-11-29T19:57:29 IST" duration-ms="528" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- findelementsSample2 -->
-        <test-method is-config="true" signature="browserQuit()[pri:0, instance:com.obsqura.TestNgSample.GetLocation@53fdffa1]" started-at="2022-11-29T16:35:10 IST" name="browserQuit" finished-at="2022-11-29T16:35:10 IST" duration-ms="187" status="PASS">
+        </test-method> <!-- checkRadioButtonNone -->
+        <test-method is-config="true" signature="browserQuit()[pri:0, instance:com.obsqura.TestNgSample.GetLocation@32ee6fee]" started-at="2022-11-29T19:57:29 IST" name="browserQuit" finished-at="2022-11-29T19:57:29 IST" duration-ms="179" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
