@@ -74,6 +74,5 @@ public class Sum extends Base{
 	}
 	
 	
-	
 
 }

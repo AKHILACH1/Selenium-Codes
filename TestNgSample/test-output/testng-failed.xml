@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.obsqura.TestNgSample.CssFind">
+      <class name="com.obsqura.TestNgSample.GetLocation">
         <methods>
           <include name="InitializeBrowser"/>
-          <include name="softAssert"/>
           <include name="browserQuit"/>
+          <include name="findelementsSample2"/>
         </methods>
-      </class> <!-- com.obsqura.TestNgSample.CssFind -->
+      </class> <!-- com.obsqura.TestNgSample.GetLocation -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

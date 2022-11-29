@@ -3,10 +3,11 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>  
-         <class name="com.obsqura.TestNgSample.CssFind">
+         <class name="com.obsqura.TestNgSample.GetLocation">
          <methods>
-         <include name="cssWrite"></include>
-         <include name="softAssert"></include>
+        
+           <include name="findelementsSample2"></include>
+         
          </methods>
         
          </class>

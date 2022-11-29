@@ -1,7 +1,11 @@
 package com.obsqura.TestNgSample;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -17,19 +21,16 @@ public class CssFind extends Base{
 	
 	@Test
 	public void softAssert() {
-		int expectedButtonHeight,actualButtonHeight,expectedButtonWidth,actualButtonWidth;
-		String actualShape,expectedShape,expectedColor,actualColor,expectedFont,actualFont,expectedFontWeight,actualFontWeight; 
-		 expectedButtonHeight = 38;
+		int expectedButtonHeight= 38,actualButtonHeight,expectedButtonWidth=94,actualButtonWidth;
+		String actualShape,expectedShape="border-box",expectedColor="rgba(255, 255, 255, 1)",
+				actualColor,expectedFont="16px / 24px \"Open Sans\", sans-serif",
+				actualFont,expectedFontWeight="400",actualFontWeight; 
+		 
 		 actualButtonHeight=driver.findElement(By.xpath("//button[@id='button-two']")).getSize().height;
-		 expectedButtonWidth=94;
 		 actualButtonWidth=driver.findElement(By.xpath("//button[@id='button-two']")).getSize().width;
-		 actualShape="border-box";
-		 expectedShape=driver.findElement(By.xpath("//button[@id='button-two']")).getCssValue("box-sizing");
-		 expectedColor="rgba(255, 255, 255, 1)";
+		 actualShape=driver.findElement(By.xpath("//button[@id='button-two']")).getCssValue("box-sizing");
 		 actualColor=driver.findElement(By.xpath("//button[@id='button-two']")).getCssValue("color");
-		 expectedFont="16px / 24px \"Open Sans\", sans-serif";
 		 actualFont=driver.findElement(By.xpath("//button[@id='button-two']")).getCssValue("font");
-		 expectedFontWeight="400";
 		 actualFontWeight=driver.findElement(By.xpath("//button[@id='button-two']")).getCssValue("font-weight");
 		
 		SoftAssert softAssert=new SoftAssert();
@@ -40,9 +41,18 @@ public class CssFind extends Base{
 		softAssert.assertEquals(expectedFont,actualFont);
 		softAssert.assertEquals(expectedFontWeight,actualFontWeight);
 		
-		
+		Point buttonLocation=driver.findElement(By.xpath("//button[@id='button-one']")).getLocation();
+		int x=buttonLocation.getX();
+		int y=buttonLocation.getY();
 		softAssert.assertAll();
 }
+	@Test
+	
+	public void findelementsSample() {
+		
+		List<WebElement>menuList=driver.findElements(By.xpath("//ul[@class='list-group list-group-flush']//li"));
+		menuList.get(2).click();
+	}
 
 }
 
