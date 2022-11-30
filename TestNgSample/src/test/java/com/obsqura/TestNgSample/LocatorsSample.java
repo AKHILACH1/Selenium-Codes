@@ -9,7 +9,7 @@ public class LocatorsSample extends Base{
 		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone");
 		driver.findElement(By.id("twotabsearchtextbox")).click();
 		driver.findElement(By.id("nav-search-submit-button"));
-		}
+	}
 	@Test
 	public void idLocator(){
 		driver.findElement(By.id("glow-ingress-line1"));
@@ -21,7 +21,7 @@ public class LocatorsSample extends Base{
 	@Test
 	public void nameLocator() {
 		driver.findElement(By.name("glow-validation-token"));
-		}
+	}
 	@Test
 	public void locatorTagAndId() {
 		driver.findElement(By.cssSelector("span#glow-ingress-line1"));

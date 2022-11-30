@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.obsqura.TestNgSample.GetLocation">
+      <class name="com.obsqura.TestNgSample.Guru">
         <methods>
           <include name="InitializeBrowser"/>
-          <include name="checkRadioButtonMale"/>
+          <include name="radioButtonNoSelected"/>
           <include name="browserQuit"/>
         </methods>
-      </class> <!-- com.obsqura.TestNgSample.GetLocation -->
+      </class> <!-- com.obsqura.TestNgSample.Guru -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

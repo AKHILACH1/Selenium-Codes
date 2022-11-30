@@ -15,8 +15,9 @@ public class Base {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\Akhila\\obsquraJava\\TestNgSample\\src\\main\\java\\Resources\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("https://selenium.obsqurazone.com/simple-form-demo.php");
+		//driver.get("https://selenium.obsqurazone.com/simple-form-demo.php");
 		//driver.get("https://www.amazon.in");
+		driver.get("https://demo.guru99.com/test/ajax.html");
 	}
 
 	public void browserClose() {

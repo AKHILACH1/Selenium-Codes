@@ -1,6 +1,8 @@
 package com.obsqura.TestNgSample;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
 import java.util.List;
 
@@ -87,9 +89,10 @@ public class GetLocation extends Base {
 		if(isSelected) {
 			buttonselect.click();
 			expectedMsg=showMsg.getText();
-			Assert.assertEquals(expectedMsg, inputMessage);
+			Assert.assertEquals(expectedMsg, inputMessage,"Not matching the message");
 			
 		}
+		assertTrue(isSelected,"Radio button 'Male' is not checked");
 	}
 	@Test
 	public void checkRadioButtonFemale() {
@@ -108,6 +111,7 @@ public class GetLocation extends Base {
 			Assert.assertEquals(expectedMsg, inputMessage);
 			
 		}
+		assertTrue(isSelected,"Radio button 'Female' is not checked");
 	}
 	@Test
 	public void checkRadioButtonNone() {
@@ -127,7 +131,78 @@ public class GetLocation extends Base {
 			Assert.assertEquals(expectedMsg, inputMessage);
 			
 		}
+		Assert.assertFalse(isMaleSelected,"Radio button 'Male' is  checked");
+		Assert.assertFalse(isFemaleSelected,"Radio button 'Female' is  checked");
 	}
+	@Test
+	public void checkBox() {
+		WebElement checkbox,showMsgField;
+		boolean isChecked;
+		String expectedMsg="Success - Check box is checked",shownMsg;
+		driver.navigate().to("https://selenium.obsqurazone.com/check-box-demo.php");
+		checkbox=driver.findElement(By.xpath("//input[@id='gridCheck']"));
+		showMsgField=driver.findElement(By.xpath("//div[@id='message-one']"));
+		checkbox.click();
+		isChecked=checkbox.isSelected();
+		shownMsg=showMsgField.getText();
+		if(isChecked) {
+			Assert.assertEquals(expectedMsg, shownMsg,"not equals the msg");
+		}
+		Assert.assertTrue(isChecked,"Checkbox is not checked");
+		}
+	
+
+	@Test
+	public void RadioButtonGenderGpMale() {
+		WebElement radioButtonMale,buttonageGroup,buttonGetResult,showMsg1;
+		boolean isSelectedMale,isselectedAgeGroup;
+		String actualMessage1,expectedMsg1;
+		driver.navigate().to("https://selenium.obsqurazone.com/radio-button-demo.php");
+		radioButtonMale= driver.findElement(By.xpath("//input[@id='inlineRadio11']"));
+		buttonGetResult=driver.findElement(By.xpath("//button[@id='button-two']"));
+		buttonageGroup=driver.findElement(By.xpath("//input[@id='inlineRadio22']"));
+		showMsg1=driver.findElement(By.xpath("//div[@id='message-two']"));
+		radioButtonMale.click();
+		isSelectedMale=radioButtonMale.isSelected();
+		if(isSelectedMale) {
+			buttonageGroup.click();
+			isselectedAgeGroup=buttonageGroup.isSelected();
+			if(isselectedAgeGroup) {
+				buttonGetResult.click();
+				actualMessage1="Gender : Male"+'\n'+ "Age group: 1 to 18";
+				expectedMsg1=showMsg1.getText();
+				Assert.assertEquals(expectedMsg1, actualMessage1,"Not matching the message");
+			}
+			Assert.assertTrue(isselectedAgeGroup, "not selected age group");
+		}	
+		Assert.assertTrue(isSelectedMale, "not selected male");
+    }
+
+	@Test
+	public void RadioButtonGenderGpFemale() {
+		WebElement radioButtonFemale,buttonageGroup,buttonGetResult,showMsg1;
+		boolean isSelectedFemale,isselectedAgeGroup;
+		String actualMessage1,expectedMsg1;
+		driver.navigate().to("https://selenium.obsqurazone.com/radio-button-demo.php");
+		radioButtonFemale= driver.findElement(By.xpath("//input[@id='inlineRadio21']"));
+		buttonGetResult=driver.findElement(By.xpath("//button[@id='button-two']"));
+		buttonageGroup=driver.findElement(By.xpath("//input[@id='inlineRadio23']"));
+		showMsg1=driver.findElement(By.xpath("//div[@id='message-two']"));
+		radioButtonFemale.click();
+		isSelectedFemale=radioButtonFemale.isSelected();
+		if(isSelectedFemale) {
+			buttonageGroup.click();
+			isselectedAgeGroup=buttonageGroup.isSelected();
+			if(isselectedAgeGroup) {
+				buttonGetResult.click();
+				actualMessage1="Gender : Female"+'\n'+"Age group: 19 to 44";
+				expectedMsg1=showMsg1.getText();
+				Assert.assertEquals(actualMessage1, expectedMsg1,"not equals");
+			}
+			Assert.assertTrue(isselectedAgeGroup, "not selected age group");
+		}	
+		Assert.assertTrue(isSelectedFemale, "not selected female");
+    }
 }
 
 
