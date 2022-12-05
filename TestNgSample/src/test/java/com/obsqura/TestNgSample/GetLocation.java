@@ -203,6 +203,56 @@ public class GetLocation extends Base {
 		}	
 		Assert.assertTrue(isSelectedFemale, "not selected female");
     }
+	@Test
+	public void checkBoxes() {
+		WebElement checkbox1, checkbox2;
+		boolean isChecked1, isChecked2;
+		driver.navigate().to("https://selenium.obsqurazone.com/check-box-demo.php");
+		checkbox1 = driver.findElement(By.xpath("//input[@id='check-box-one']"));
+		checkbox2 = driver.findElement(By.xpath("//input[@id='check-box-two']"));
+		checkbox1.click();
+		isChecked1 = checkbox1.isSelected();
+		checkbox2.click();
+		isChecked2 = checkbox2.isSelected();
+		if (isChecked1) {
+			Assert.assertTrue(isChecked1, "Checkbox1 is not checked");
+		}
+		if (isChecked2) {
+			Assert.assertTrue(isChecked2, "Checkbox2 is not checked");
+		}
+	}
+	@Test
+	public void checkBoxesAllSelectOrUnSelect() {
+		WebElement checkbox1, checkbox2, checkbox3, checkbox4, selectOrDeselectButton;
+		boolean isChecked1, isChecked2, isChecked3, isChecked4;
+		String buttonText;
+		driver.navigate().to("https://selenium.obsqurazone.com/check-box-demo.php");
+		checkbox1 = driver.findElement(By.xpath("//input[@id='check-box-one']"));
+		checkbox2 = driver.findElement(By.xpath("//input[@id='check-box-two']"));
+		checkbox3 = driver.findElement(By.xpath("//input[@id='check-box-three']"));
+		checkbox4 = driver.findElement(By.xpath("//input[@id='check-box-four']"));
+		selectOrDeselectButton = driver.findElement(By.xpath("//input[@id='button-two']"));
+		checkbox1.click();
+		isChecked1 = checkbox1.isSelected();
+		checkbox2.click();
+		isChecked2 = checkbox2.isSelected();
+		checkbox3.click();
+		isChecked3 = checkbox3.isSelected();
+		checkbox4.click();
+		isChecked4 = checkbox4.isSelected();
+		if ((isChecked1==true) && (isChecked2==true) &&(isChecked3==true)&&(isChecked4==true)) {
+			selectOrDeselectButton.click();
+			isChecked1=false;
+			isChecked2=false;
+			isChecked3=false;
+			isChecked4=false;
+			Assert.assertFalse(isChecked1, "Checkbox1 is  checked");
+			Assert.assertFalse(isChecked2, "Checkbox2 is  checked");
+			Assert.assertFalse(isChecked3, "Checkbox3 is  checked");
+			Assert.assertFalse(isChecked4, "Checkbox4 is  checked");
+		}
+		
+	}
 }
 
 
