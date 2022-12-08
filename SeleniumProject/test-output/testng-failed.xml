@@ -3,13 +3,11 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.obsqura.testScripts.SimpleFormDemoTest">
+      <class name="com.obsqura.testScripts.SelectInputDemoTest">
         <methods>
-          <include name="InitializeBrowser"/>
-          <include name="enterMsgAndSingleInputField"/>
-          <include name="browserQuit"/>
+          <include name="selectCheck"/>
         </methods>
-      </class> <!-- com.obsqura.testScripts.SimpleFormDemoTest -->
+      </class> <!-- com.obsqura.testScripts.SelectInputDemoTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

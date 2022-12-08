@@ -5,6 +5,9 @@
   <classes>
   <class name="com.obsqura.testScripts.SimpleFormDemoTest"/>
   <class name="com.obsqura.testScripts.CheckBoxDemoTest"></class>
+   <class name="com.obsqura.testScripts.RadioButtonsDemoTest"></class>
+    <class name="com.obsqura.testScripts.SelectInputDemoTest"></class>
+   
  
   </classes>
   </test> <!-- Test -->
