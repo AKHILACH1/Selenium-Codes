@@ -1,16 +1,11 @@
 package com.obsqura.pages;
 
 import java.io.IOException;
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
 import com.obsqura.utilities.ExcelUtility;
 import com.obsqura.utilities.PageUtility;
 import com.obsqura.utilities.WaitUtility;
@@ -37,16 +32,33 @@ public class ManageExpensePage {
 	private WebElement saveBtn;
 	
 	public void manageExpenseMethod() throws IOException {
-	manageExpenseBtn.click();
-	WaitUtility.waitForElement(driver, expenseCategoryBtn);
-	expenseCategoryBtn.click();
-	WaitUtility.waitForElement(driver, newBtn);
-	newBtn.click();
-	String title=ExcelUtility.getString(0, 0, System.getProperty("user.dir") + constants.Constants.EXCELFILE , "ExpenseCategory");
-	titleField.sendKeys(title);
-	WaitUtility.waitForElement(driver, newBtn);
-	saveBtn.click();
-	}
+		String actual=ExcelUtility.getString(1, 0, System.getProperty("user.dir") + constants.Constants.EXCELFILE , "ManageExpenseSheet");
+		WaitUtility.waitForElement(driver, manageExpenseBtn);
+		Assert.assertTrue(PageUtility.isElementEnabled(manageExpenseBtn),"manage expense button is not enabled");
+		PageUtility.clickOnElement(manageExpenseBtn);		
+		WaitUtility.waitForElement(driver, expenseCategoryBtn);
+		Assert.assertTrue(PageUtility.isElementEnabled(expenseCategoryBtn), "expense category click not enabled");
+		PageUtility.clickOnElement(expenseCategoryBtn);		
+		Assert.assertEquals(actual, PageUtility.getElementText(expenseCategoryBtn),"expense category click failed");		
+		}
+	public void manageExpenseNew() throws IOException {
+		String actual=ExcelUtility.getString(3, 0, System.getProperty("user.dir") + constants.Constants.EXCELFILE , "ManageExpenseSheet");
+		WaitUtility.waitForElement(driver, manageExpenseBtn);
+		Assert.assertTrue(PageUtility.isElementEnabled(manageExpenseBtn),"manage expense button is not clickable");
+		PageUtility.clickOnElement(manageExpenseBtn);
+		WaitUtility.waitForElement(driver, expenseCategoryBtn);
+		Assert.assertTrue(PageUtility.isElementEnabled(expenseCategoryBtn),"Expense category button is not clickable");
+		PageUtility.clickOnElement(expenseCategoryBtn);		
+		WaitUtility.waitForElement(driver, newBtn);
+		Assert.assertTrue(PageUtility.isElementEnabled(newBtn),"New button is not enabled");
+		PageUtility.clickOnElement(newBtn);
+		String title=ExcelUtility.getString(0, 0, System.getProperty("user.dir") + constants.Constants.EXCELFILE , "ExpenseCategory");
+		PageUtility.enterText(titleField, title);
+		WaitUtility.waitForElement(driver, saveBtn);
+		Assert.assertTrue(PageUtility.isElementEnabled(saveBtn),"Save button is not enabled");
+		PageUtility.clickOnElement(saveBtn);
+		Assert.assertEquals(actual, PageUtility.getElementText(saveBtn),"Save failed");
+		}
 
 }
 

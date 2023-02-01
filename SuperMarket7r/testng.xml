@@ -7,8 +7,19 @@
   <test thread-count="5" name="Test">
   <parameter name="browser" value="chrome"></parameter>
     <classes>
-      <class name="com.obsqura.testScripts.LoginTest"></class>
-      <class name="com.obsqura.testScripts.ManageExpenseTest"></class>
+    <class name="com.obsqura.testScripts.LoginTest"/>   
+     <class name="com.obsqura.testScripts.MobileSliderTest"/>
+      <class name="com.obsqura.testScripts.ManageUserTest"/>
+      <class name="com.obsqura.testScripts.HomePageTest"/>
+      <class name="com.obsqura.testScripts.SettingsTest"/>
+      <class name="com.obsqura.testScripts.ManageExpenseTest"/>
+      <class name="com.obsqura.testScripts.ManageSliderTest"/>
+      <class name="com.obsqura.testScripts.ManageProductTest"/>
+      <class name="com.obsqura.testScripts.ManageLocationTest"/>
+      <class name="com.obsqura.testScripts.PushNotificationTest"/>        
+      <class name="com.obsqura.testScripts.ManageDeliveryBoyTest"/>
+      <class name="com.obsqura.testScripts.ManageCategoryTest"/>
+ 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -19,6 +19,16 @@ public class ManageExpenseTest extends Base{
 		objLogin.adminLogin();
 		obj=new ManageExpensePage(driver);
 		obj.manageExpenseMethod();
+				
+	}
+
+	@Test
+	public void manageExpenseTestNew() throws IOException {
+		
+		objLogin=new LoginPage(driver);
+		objLogin.adminLogin();
+		obj=new ManageExpensePage(driver);
+		obj.manageExpenseNew();
 		
 	}
 
